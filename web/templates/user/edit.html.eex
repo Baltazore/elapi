@@ -1,0 +1,19 @@
+<div class="col-md-12">
+<h3>Edit: <%= @user.name %></h3>
+
+<div class="actions">
+  <form action="<%= user_path(:update, @user.id) %>" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <div class="form-group">
+      <input type="text" name="user[name]" value="<%= @user.name %>" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+
+  <form action="<%= user_path(:destroy, @user.id) %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit" class="btn btn-default btn-sm">Delete</button>
+  </form>
+</div>
+
+<a href="<%= user_path(:index) %>">Cancel</a>

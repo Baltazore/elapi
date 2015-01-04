@@ -1,0 +1,6 @@
+<div class="info">
+  <p> Name: <%= @user.name %> </p>
+</div>
+<div class="cancel">
+  <a href="<%= user_path(:index) %>">Back</a>
+</div>

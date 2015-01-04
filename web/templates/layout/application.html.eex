@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hello Phoenix!</title>
+    <link rel="stylesheet" href="/css/phoenix.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <span class="logo"></span>
+      </div>
+
+      <%= for error <- Flash.get_all(@conn, :error) do %>
+        <div class="flash_error">
+          <div class="row">
+            <p><%= error %></p>
+          </div>
+        </div>
+      <% end %>
+
+      <%= for notice <- Flash.get_all(@conn, :notice) do %>
+        <div class="flash_notice">
+          <div class="row">
+            <p><%= notice %></p>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="marketing">
+        <%= @inner %>
+      </div>
+
+      <div class="footer">
+        Created by @Baltazore
+      </div>
+
+    </div> <!-- /container -->
+  </body>
+</html>

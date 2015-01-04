@@ -1,0 +1,16 @@
+<h3>Users</h3>
+
+<ul>
+  <%= for user <- @users do %>
+    <li>
+      <a href="<%= user_path(:show, user.id) %>">
+        <%= user.name %>
+      </a>
+      <a href="<%= user_path(:edit, user.id) %>">Edit</a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="<%= user_path(:new) %>" class="btn btn-primary">
+  New User
+</a>

@@ -1,0 +1,10 @@
+<h1>New User</h1>
+
+<form action="/users" method="post">
+  <div class="form-group">
+    <label for="user[name]">Name</label>
+    <input type="text" name="user[name]" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a href="<%= user_path(:index) %>">Back</a>
+</form>
