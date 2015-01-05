@@ -1,9 +1,6 @@
-elapi
-=====
-
-Simple phoenix project to try it out
-=======
 # Elapi
+
+## Simple phoenix project to try it out
 
 To start your new Phoenix application:
 
